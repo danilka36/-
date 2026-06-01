@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космическая Айгуль — Официальный сайт</title>
+    <style>
+        /* Базовые стили и обнуление */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background: #0d0d13;
+            color: #f5f5f7;
+            overflow-x: hidden;
+        }
+
+        /* Наша неоновая палитра под цвет ошейника Айгуль */
+        :root {
+            --neon-pink: #ff2a74;
+            --neon-glow: rgba(255, 42, 116, 0.6);
+            --space-dark: #12121a;
+        }
+
+        /* 1. ГЛАВНЫЙ ЭКРАН */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            background: radial-gradient(circle at center, #1a1a26 0%, #0d0d13 100%);
+        }
+
+        .hero-avatar-wrapper {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .hero-avatar {
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--neon-pink);
+            box-shadow: 0 0 20px var(--neon-glow), inset 0 0 20px var(--neon-glow);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-avatar:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 0 0 10px var(--neon-glow);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #8a8a9e;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .badge {
+            background: var(--neon-pink);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 15px;
+            display: inline-block;
+            box-shadow: 0 0 10px var(--neon-glow);
+        }
+
+        /* Разделительные линии */
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-pink), transparent);
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* 2. БЛОКИ КОНТЕНТА (ДОСЬЕ И ЛАСКА) */
+        .dossier-section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+        }
+
+        .dossier-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .dossier-image {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Список характеристик */
+        .stats-list {
+            list-style: none;
+        }
+
+        .stats-item {
+            background: var(--space-dark);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--neon-pink);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .stats-label {
+            font-weight: bold;
+            color: #8a8a9e;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .stats-value {
+            font-size: 1.1rem;
+            color: #fff;
+            text-align: right;
+        }
+
+        /* Адаптив под мобилки */
+        @media (max-width: 768px) {
+            .dossier-grid {
+                grid-template-columns: 1fr !important;
+            }
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- БЛОК 1: ГЛАВНЫЙ ЭКРАН -->
+    <section class="hero-section">
+        <div class="hero-avatar-wrapper">
+            <img src="photo_2026-06-01_21-54-43.jpg" alt="Айгуль Прекрасная" class="hero-avatar">
+        </div>
+        <h1 class="hero-title">Айгуль</h1>
+        <p class="hero-subtitle">Межгалактическая инопланетянка, ворующая чипсы и разбивающая стереотипы о домашних животных.</p>
+        <div class="badge">Статус: Свободна и опасна</div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- БЛОК 2: СЕКРЕТНОЕ ДОСЬЕ -->
+    <section class="dossier-section">
+        <h2 class="section-title">Секретное Досье</h2>
+        
+        <div class="dossier-grid">
+            <div>
+                <img src="photo_2026-06-01_21-54-48.jpg" alt="Айгуль в засаде" class="dossier-image">
+            </div>
+            
+            <div>
+                <ul class="stats-list">
+                    <li class="stats-item">
+                        <span class="stats-label">Возраст:</span>
+                        <span class="stats-value">5 лет (в самом соку)</span>
+                    </li>
+                    <li class="stats-item">
+                        <span class="stats-label">Семейное положение:</span>
+                        <span class="stats-value">Сильная независимая женщина (без мужа)</span>
+                    </li>
+                    <li class="stats-item">
+                        <span class="stats-label">Главная слабость:</span>
+                        <span class="stats-value">Схавать пачку чипсов в одно рыло</span>
+                    </li>
+                    <li class="stats-item">
+                        <span class="stats-label">Хобби:</span>
+                        <span class="stats-value">Профессиональный паркур по мебели</span>
+                    </li>
+                    <li class="stats-item">
+                        <span class="stats-label">Характер:</span>
+                        <span class="stats-value">Ласковый пришелец, но склонна к побегам</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- БЛОК 3: ХРОНИКИ ПРЕСТУПЛЕНИЙ (ПОБЕГ И ЧИПСЫ) -->
+    <section style="background: #12121a; width: 100%; margin: 40px 0; padding: 60px 20px;">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <h2 class="section-title" style="color: var(--neon-pink);">Громкие дела Айгуль</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+                
+                <!-- Дело №1: Побег -->
+                <div style="background: #0d0d13; border: 1px solid rgba(255,255,255,0.05); padding: 25px; border-radius: 12px; position: relative;">
+                    <div style="position: absolute; top: 10px; right: 10px; background: red; color: white; font-size: 0.75rem; font-weight: bold; padding: 3px 8px; border-radius: 4px; text-transform: uppercase;">Спецоперация</div>
+                    <h3 style="margin-bottom: 15px; color: #fff;">Великий побег на волю</h3>
+                    <p style="color: #8a8a9e; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                        Один раз Айгуль решила, что стены дома слишком малы для её космического эго, и технично съебалась на улицу. План перехвата длился ровно 2 часа. Кожаные мешки бегали, суетились и пытались поймать инопланетянку, пока та тестировала свои навыки паркура на дикой природе.
+                    </p>
+                    <div style="font-weight: bold; color: var(--neon-pink); font-size: 0.9rem;">Итог: Поймана, возвращена на базу, не раскаивается.</div>
+                </div>
+
+                <!-- Дело №2: Чипсы -->
+                <div style="background: #0d0d13; border: 1px solid rgba(255,255,255,0.05); padding: 25px; border-radius: 12px; position: relative;">
+                    <div style="position: absolute; top: 10px; right: 10px; background: #ff9800; color: white; font-size: 0.75rem; font-weight: bold; padding: 3px 8px; border-radius: 4px; text-transform: uppercase;">Ограбление</div>
+                    <h3 style="margin-bottom: 15px; color: #fff;">Чипсовый коллапс</h3>
+                    <p style="color: #8a8a9e; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                        Зачем просить паштет, если можно взять всё под свой контроль? Наглая экономическая диверсия: Айгуль вскрыла и в одиночку схавала целую пачку чипсов в одно рыло. Без глутамата натрия жизнь не та, особенно когда ты сильная и независимая.
+                    </p>
+                    <div style="font-weight: bold; color: var(--neon-pink); font-size: 0.9rem;">Итог: Хруст стоял на всю галактику. Крах диеты.</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 4: ЛАСКОВЫЙ ПРИШЕЛЕЦ -->
+    <section class="dossier-section">
+        <div class="dossier-grid" style="grid-template-columns: 1.2fr 1fr;">
+            <div>
+                <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">Но в душе она — булочка</h2>
+                <p style="color: #8a8a9e; line-height: 1.7; margin-bottom: 20px; font-size: 1.1rem;">
+                    Когда все чипсы съедены, а шторы успешно атакованы, Айгуль превращается в самого ласкового пришельца в мире. Она приходит на ручки, включает свой встроенный мурчальник на максимум и гипнотизирует огромными желтыми глазами. 
+                </p>
+                <p style="color: #6a6a7e; font-style: italic;">
+                    * Мурчаление Айгуль официально признано безопасным аналогом успокоительного.
+                </p>
+            </div>
+            <div>
+                <img src="photo_2026-06-01_21-54-49.jpg" alt="Ласковая Айгуль" class="dossier-image">
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ФУТЕР С ИНТЕРАКТИВНЫМ НОСОМ (ПАСХАЛКА) -->
+    <footer style="padding: 60px 20px; text-align: center; background: #09090d;">
+        <div style="position: relative; display: inline-block; margin-bottom: 20px;">
+            <img src="photo_2026-06-01_21-54-45.jpg" alt="Нос Айгуль" id="cat-nose" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid #fff; cursor: pointer; transition: transform 0.1s ease;">
+            <div style="color: #fff; font-size: 0.8rem; margin-top: 10px; letter-spacing: 1px; text-transform: uppercase;">Тыкни в нос!</div>
+        </div>
+        <p style="color: #4a4a5e; font-size: 0.85rem;">&copy; 2026 Space Aigul Corp. Все права защищены кусь-кодексом.</p>
+    </footer>
+
+    <!-- Скрипт для клика по носу -->
+    <script>
+        const nose = document.getElementById('cat-nose');
+        nose.addEventListener('click', () => {
+            // Анимация быстрого сжатия
+            nose.style.transform = 'scale(0.9)';
+            setTimeout(() => nose.style.transform = 'scale(1)', 100);
+            
+            // Всплывающее окно
+            alert('МЯУ! Вы получили космическое благословение Айгуль на успешный паркур и пачку чипсов! 🚀🍟');
+        });
+    </script>
+
+</body>
+</html>
